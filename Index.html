@@ -66,7 +66,6 @@
             border: 5px solid white;
             margin-bottom: 20px;
             object-fit: cover;
-            background-color: #ddd;
         }
         
         .name {
@@ -305,36 +304,39 @@
             margin-right: 5px;
         }
         
-        /* Projects Section */
-        .projects-container {
+        /* Certifications Section */
+        #certifications {
+            background-color: white;
+        }
+        
+        .certifications-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
         }
         
-        .project-item {
-            flex: 0 0 calc(33.333% - 30px);
-            background-color: white;
+        .certification-item {
+            flex: 0 0 calc(50% - 30px);
+            background-color: var(--light-color);
+            padding: 20px;
             border-radius: 5px;
-            overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        .project-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #ddd;
-        }
-        
-        .project-info {
-            padding: 20px;
-        }
-        
-        .project-title {
+        .certification-date {
             font-weight: 600;
-            margin-bottom: 10px;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .certification-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .certification-desc {
+            margin-top: 10px;
         }
         
         /* Contact Section */
@@ -419,7 +421,7 @@
                 left: 22px;
             }
             
-            .education-item, .skills-category, .project-item {
+            .education-item, .skills-category, .certification-item {
                 flex: 0 0 100%;
             }
             
@@ -437,19 +439,19 @@
             <div class="header-content">
                 <img src="/api/placeholder/400/400" alt="Jose Mendieta" class="profile-img">
                 <h1 class="name">Jose Mendieta</h1>
-                <p class="title">Software Engineer</p>
+                <p class="title">IT Professional</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <span>📧</span>
-                        <a href="mailto:jose.mendieta@example.com">jose.mendieta@example.com</a>
+                        <a href="mailto:josemendieta1010@gmail.com">josemendieta1010@gmail.com</a>
                     </div>
                     <div class="contact-item">
                         <span>📱</span>
-                        <a href="tel:+1234567890">(123) 456-7890</a>
+                        <a href="tel:+17083810944">(708) 381-0944</a>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>San Francisco, CA</span>
+                        <span>Joliet, IL 60432</span>
                     </div>
                 </div>
             </div>
@@ -465,7 +467,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -476,7 +478,7 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>Experienced Software Engineer with a passion for developing innovative programs that expedite the efficiency and effectiveness of organizational success. Well-versed in technology and writing code to create systems that are reliable and user-friendly. Skilled leader who has the proven ability to motivate, educate, and manage a team of professionals to build software programs and effectively track changes. Confident communicator, strategic thinker, and innovative creator to develop software that is customized to meet a company's organizational needs, highlight their core competencies, and further their success.</p>
+                <p>Driven IT professional pursuing CompTIA A+ certification, with hands-on experience in hardware troubleshooting, software configuration, and network maintenance. Eager to apply technical expertise and problem-solving skills in a dynamic IT environment, continually seeking to grow and contribute effectively to a technology-driven team.</p>
             </div>
         </div>
     </section>
@@ -488,40 +490,77 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p class="timeline-date">2020 - Present</p>
-                        <h3 class="timeline-title">Senior Software Engineer</h3>
-                        <p class="timeline-company">Tech Innovations Inc., San Francisco, CA</p>
+                        <p class="timeline-date">January 2022 - February 2024</p>
+                        <h3 class="timeline-title">Crew Member</h3>
+                        <p class="timeline-company">McDonald's - Joliet, IL</p>
                         <ul>
-                            <li>Lead a team of 5 developers in creating cutting-edge web applications</li>
-                            <li>Architect and implement scalable microservices architecture</li>
-                            <li>Collaborate with product managers to define product requirements</li>
-                            <li>Implement continuous integration and deployment pipelines</li>
+                            <li>Handled various orders while maintaining a high-speed pace with accuracy</li>
+                            <li>Provided kind service to every customer with 100% satisfaction</li>
+                            <li>Demonstrated strong teamwork orientation</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p class="timeline-date">2017 - 2020</p>
-                        <h3 class="timeline-title">Software Engineer</h3>
-                        <p class="timeline-company">Digital Solutions LLC, Seattle, WA</p>
+                        <p class="timeline-date">September 2023 - January 2024</p>
+                        <h3 class="timeline-title">OSL Mobile Expert</h3>
+                        <p class="timeline-company">OSL Retail Services Inc. - Joliet, IL</p>
                         <ul>
-                            <li>Developed RESTful APIs using Node.js and Express</li>
-                            <li>Created responsive web interfaces using React and Redux</li>
-                            <li>Optimized database queries resulting in 40% performance improvement</li>
-                            <li>Participated in agile development processes</li>
+                            <li>Specialized in mobile phone sales and customer service at Walmart</li>
+                            <li>Managed product displays and assisted customers with phone activations and upgrades</li>
+                            <li>Provided tailored recommendations for devices and plans</li>
+                            <li>Continuously updated knowledge on latest tech trends</li>
+                            <li>Collaborated with team to meet sales goals</li>
                         </ul>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <p class="timeline-date">2015 - 2017</p>
-                        <h3 class="timeline-title">Junior Developer</h3>
-                        <p class="timeline-company">Web Creations Co., Portland, OR</p>
+                        <p class="timeline-date">July 2020 - March 2023</p>
+                        <h3 class="timeline-title">Counter Person</h3>
+                        <p class="timeline-company">Haunted Trails - Joliet, IL</p>
                         <ul>
-                            <li>Built and maintained client websites using HTML, CSS, and JavaScript</li>
-                            <li>Implemented responsive designs for mobile compatibility</li>
-                            <li>Assisted senior developers with debugging and testing</li>
-                            <li>Managed content updates using WordPress CMS</li>
+                            <li>Managed counter operations and assisted with rides</li>
+                            <li>Redeemed prizes and fixed machines</li>
+                            <li>Supervised floor operations when assigned as lead</li>
+                            <li>Performed various additional tasks as required</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-date">May 2022 - February 2023</p>
+                        <h3 class="timeline-title">Fulfillment Associate</h3>
+                        <p class="timeline-company">Amazon - Joliet, IL</p>
+                        <ul>
+                            <li>Performed picking, stowing, ICQA, and packing duties</li>
+                            <li>Worked across different floors and aisles</li>
+                            <li>Walked 10-15 miles daily in fast-paced environment</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-date">September 2021 - September 2022</p>
+                        <h3 class="timeline-title">Store Associate</h3>
+                        <p class="timeline-company">Best Buy - Joliet, IL</p>
+                        <ul>
+                            <li>Assisted customers in finding electronics and provided product information</li>
+                            <li>Maintained organized sales floor and restocked shelves</li>
+                            <li>Ensured accurate pricing and promoted loyalty program</li>
+                            <li>Recognized for friendly service and strong sales performance</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <p class="timeline-date">September 2021 - November 2021</p>
+                        <h3 class="timeline-title">Parking Lot Attendant</h3>
+                        <p class="timeline-company">Bengtson's Pumpkin Farm - Joliet, IL</p>
+                        <ul>
+                            <li>Coordinated with team to manage parking operations</li>
+                            <li>Directed drivers to appropriate parking spots</li>
+                            <li>Ensured efficient traffic flow during peak season</li>
                         </ul>
                     </div>
                 </div>
@@ -535,16 +574,10 @@
             <h2 class="section-title">Education</h2>
             <div class="education-container">
                 <div class="education-item">
-                    <p class="education-date">2011 - 2015</p>
-                    <h3 class="education-degree">Bachelor of Science in Computer Science</h3>
-                    <p class="education-school">University of California, Berkeley</p>
-                    <p>Graduated with honors. Specialized in Software Engineering and Data Structures.</p>
-                </div>
-                <div class="education-item">
-                    <p class="education-date">2019</p>
-                    <h3 class="education-degree">AWS Certified Solutions Architect</h3>
-                    <p class="education-school">Amazon Web Services</p>
-                    <p>Professional certification in designing distributed systems on AWS.</p>
+                    <p class="education-date">August 2018 - May 2022</p>
+                    <h3 class="education-degree">High School Diploma</h3>
+                    <p class="education-school">Joliet Central High School - Joliet, IL</p>
+                    <p>Received Seal of Biliteracy in May 2022, demonstrating advanced proficiency in both English and Spanish.</p>
                 </div>
             </div>
         </div>
@@ -556,94 +589,79 @@
             <h2 class="section-title">Skills</h2>
             <div class="skills-container">
                 <div class="skills-category">
-                    <h3>Programming Languages</h3>
+                    <h3>Technical Skills</h3>
                     <ul class="skills-list">
-                        <li>JavaScript (ES6+)</li>
-                        <li>TypeScript</li>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>C#</li>
+                        <li>Computer Hardware</li>
+                        <li>Computer Networking</li>
+                        <li>Technical Support</li>
+                        <li>Software Troubleshooting</li>
+                        <li>Windows Operating System</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h3>Front-end Technologies</h3>
+                    <h3>Software Proficiency</h3>
                     <ul class="skills-list">
-                        <li>React.js</li>
-                        <li>Redux</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>SASS/SCSS</li>
-                        <li>Webpack</li>
+                        <li>Microsoft Office (5 years)</li>
+                        <li>Microsoft Word (5 years)</li>
+                        <li>Microsoft Excel (5 years)</li>
+                        <li>Programming (2 years)</li>
+                        <li>Basic Computer Skills</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h3>Back-end Technologies</h3>
+                    <h3>Professional Skills</h3>
                     <ul class="skills-list">
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
-                        <li>RESTful APIs</li>
+                        <li>Customer Service</li>
+                        <li>Problem Management</li>
+                        <li>Time Management</li>
+                        <li>Sales Experience</li>
+                        <li>Leadership</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h3>DevOps & Tools</h3>
+                    <h3>Languages</h3>
                     <ul class="skills-list">
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>AWS Services</li>
-                        <li>CI/CD Pipelines</li>
+                        <li>English (Expert)</li>
+                        <li>Spanish (Expert)</li>
+                        <li>Bilingual Proficiency</li>
                     </ul>
                 </div>
                 <div class="skills-category">
-                    <h3>Methodologies</h3>
+                    <h3>Other Skills</h3>
                     <ul class="skills-list">
-                        <li>Agile/Scrum</li>
-                        <li>Test-Driven Development</li>
-                        <li>Microservices Architecture</li>
-                        <li>Object-Oriented Design</li>
-                        <li>Design Patterns</li>
-                    </ul>
-                </div>
-                <div class="skills-category">
-                    <h3>Soft Skills</h3>
-                    <ul class="skills-list">
-                        <li>Team Leadership</li>
-                        <li>Project Management</li>
-                        <li>Problem Solving</li>
-                        <li>Communication</li>
-                        <li>Mentoring</li>
+                        <li>Order Fulfillment</li>
+                        <li>Materials Handling</li>
+                        <li>Warehouse Experience</li>
+                        <li>Restaurant Experience</li>
+                        <li>Driving</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Projects Section -->
-    <section id="projects">
+    <!-- Certifications Section -->
+    <section id="certifications">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-container">
-                <div class="project-item">
-                    <img src="/api/placeholder/400/300" alt="E-commerce Platform" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">E-commerce Platform</h3>
-                        <p>Built a full-stack e-commerce platform with React, Node.js, and MongoDB. Implemented features like product search, shopping cart, and payment processing.</p>
-                    </div>
+            <h2 class="section-title">Certifications & Assessments</h2>
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <p class="certification-date">May 2024 - September 2027</p>
+                    <h3 class="certification-title">CompTIA A+ Certification</h3>
+                    <p class="certification-desc">A globally recognized credential validating foundational IT skills including troubleshooting, problem-solving, networking, operating systems, mobile devices, and security.</p>
                 </div>
-                <div class="project-item">
-                    <img src="/api/placeholder/400/300" alt="Task Management App" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Task Management App</h3>
-                        <p>Developed a real-time task management application using React and Firebase. Features include task organization, deadline reminders, and team collaboration.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <img src="/api/placeholder/400/300" alt="Data Visualization Dashboard" class="project-img">
-                    <div class="project-info">
-                        <h3 class="project-title">Data Visualization Dashboard</h3>
-                        <p>Created an interactive dashboard for visualizing complex datasets using D3.js and React. Implemented features like filtering, sorting, and export functionality.</p>
-                    </div>
+                <div class="certification-item">
+                    <p class="certification-date">March 2024</p>
+                    <h3 class="certification-title">Proficient Assessments</h3>
+                    <ul>
+                        <li>Spreadsheets with Microsoft Excel</li>
+                        <li>Working with MS Word Documents</li>
+                        <li>Technical Support</li>
+                        <li>Technical Support: Customer Situations</li>
+                        <li>Proofreading</li>
+                        <li>Retail Customer Service</li>
+                        <li>Work Style: Reliability</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -658,23 +676,18 @@
                     <div class="contact-method">
                         <div class="contact-icon">✉️</div>
                         <h3>Email</h3>
-                        <p><a href="mailto:jose.mendieta@example.com">jose.mendieta@example.com</a></p>
+                        <p><a href="mailto:josemendieta1010@gmail.com">josemendieta1010@gmail.com</a></p>
                     </div>
                     <div class="contact-method">
                         <div class="contact-icon">📱</div>
                         <h3>Phone</h3>
-                        <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+                        <p><a href="tel:+17083810944">(708) 381-0944</a></p>
                     </div>
                     <div class="contact-method">
                         <div class="contact-icon">📍</div>
                         <h3>Location</h3>
-                        <p>San Francisco, CA</p>
+                        <p>Joliet, IL 60432</p>
                     </div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link">in</a>
-                    <a href="#" class="social-link">gh</a>
-                    <a href="#" class="social-link">tw</a>
                 </div>
             </div>
         </div>
