@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz Game</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .quiz-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .answers label {
+            display: block;
+            padding: 8px;
+            border: 1px solid var(--light-color);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .answers input {
+            margin-right: 10px;
+        }
+
+        button {
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Coding Quiz Game</h1>
+        <div id="quiz"></div>
+        <button id="next">Next</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                text: "What is the correct syntax to declare a constant in JavaScript?",
+                answers: [
+                    { text: "const x = 5;", correct: true },
+                    { text: "let x = 5;", correct: false },
+                    { text: "var x = 5;", correct: false },
+                    { text: "constant x = 5;", correct: false }
+                ]
+            },
+            {
+                text: "Which method converts a JSON string into a JavaScript object?",
+                answers: [
+                    { text: "JSON.stringify()", correct: false },
+                    { text: "JSON.parse()", correct: true },
+                    { text: "JSON.decode()", correct: false },
+                    { text: "JSON.encode()", correct: false }
+                ]
+            },
+            {
+                text: "Which of the following will output 'Hello World' to the console?",
+                answers: [
+                    { text: "console.log('Hello World');", correct: true },
+                    { text: "print('Hello World');", correct: false },
+                    { text: "alert('Hello World');", correct: false },
+                    { text: "document.write('Hello World');", correct: false }
+                ]
+            },
+            {
+                text: "How do you create a function named myFunction in JavaScript?",
+                answers: [
+                    { text: "function myFunction() {}", correct: true },
+                    { text: "func myFunction() {}", correct: false },
+                    { text: "def myFunction() {}", correct: false },
+                    { text: "function: myFunction {}", correct: false }
+                ]
+            },
+            {
+                text: "Which operator is used to compare both value and type?",
+                answers: [
+                    { text: "==", correct: false },
+                    { text: "===", correct: true },
+                    { text: "!=", correct: false },
+                    { text: "<>", correct: false }
+                ]
+            }
+        ];
+
+        let current = 0;
+        let score = 0;
+
+        const quizContainer = document.getElementById('quiz');
+        const nextButton = document.getElementById('next');
+        const result = document.getElementById('result');
+
+        function showQuestion() {
+            const q = questions[current];
+            quizContainer.innerHTML = `<div class="question"><strong>${q.text}</strong></div>`;
+            const answersDiv = document.createElement('div');
+            answersDiv.className = 'answers';
+            q.answers.forEach((a, index) => {
+                const label = document.createElement('label');
+                label.innerHTML = `<input type="radio" name="answer" value="${index}"> ${a.text}`;
+                answersDiv.appendChild(label);
+            });
+            quizContainer.appendChild(answersDiv);
+        }
+
+        function showResult() {
+            quizContainer.style.display = 'none';
+            nextButton.style.display = 'none';
+            result.textContent = `You scored ${score} out of ${questions.length}!`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            const selected = document.querySelector('input[name="answer"]:checked');
+            if (!selected) return;
+            if (questions[current].answers[selected.value].correct) {
+                score++;
+            }
+            current++;
+            if (current < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        });
+
+        showQuestion();
+    </script>
+</body>
+</html>
